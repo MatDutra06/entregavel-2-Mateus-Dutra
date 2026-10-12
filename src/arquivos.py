@@ -12,14 +12,11 @@ def ler_anotacoes(caminho):
             imagens = {}
 
             for linha in leitor1:
+                check = True
                 nome = linha["imagem"]
 
                 if nome not in imagens:
                     imagens[nome] = ImagemAnotada(nome)
-                
-
-                if int(linha["x_min"]) >=  int(linha["x_max"]) or int(linha["y_min"]) >= int(linha["y_max"]):
-                    pass
         
                 objeto = Deteccao(int(linha["classe_id"]),int(linha["x_min"]),int(linha["y_min"]),int(linha["x_max"]),int(linha["y_max"]))
                 imagens[nome].add_deteccao(objeto)
@@ -27,7 +24,5 @@ def ler_anotacoes(caminho):
      except FileNotFoundError:
           print("Erro : Arquivo csv invalido")
           raise(SystemExit(1))
-     except ValueError:
-          pass
 
      return imagens

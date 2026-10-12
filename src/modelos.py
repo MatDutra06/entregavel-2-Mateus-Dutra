@@ -15,20 +15,20 @@ class Deteccao:   #classe de desenhar nas imagens
             cv2.rectangle(imagem,(self.xmin,self.ymin),(self.xmax,self.ymax),(255,0,0))  
 
 
-class ImagemAnotada:
+class ImagemAnotada: #classe de armazenamento de imagens
     def __init__(self,nome_imagem):
         self.imagem = nome_imagem
         self.lista = []
         
 
-    def add_deteccao(self,objeto_de_deteccao):
+    def add_deteccao(self,objeto_de_deteccao): #adiciona as novas deteccoes 
         self.lista.append(objeto_de_deteccao)
 
 
-    def guardar_imagem(self,imagem):
+    def gerar_imagem(self,imagem): #cria a copia da imagem original
         copia = imagem.copy()
         for lt in self.lista:
-            lt.desenhar(self.lista)
+            lt.desenhar(copia)
         return copia
 
     def __len__(self):   #numero de dados de cada imagem
