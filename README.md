@@ -1,4 +1,4 @@
-# Material complementar do entregável 2
+# Mateus-Dutra-Entregavel2
 
 Este pacote contém 10 imagens e suas 581 bounding boxes, selecionadas do arquivo visdrone_calib_256.zip fornecido pela organização. As imagens foram apenas renomeadas; seus bytes e sua resolução foram preservados. Todas as anotações das imagens selecionadas foram mantidas, na ordem dos TXT de origem.
 

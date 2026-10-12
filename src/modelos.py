@@ -10,7 +10,7 @@ class Deteccao:   #classe de desenhar nas imagens
 
     def desenhar(self,imagem): #metodo para desenhar o retangulo
         if self.id == 1:
-            cv2.rectangle(imagem,(self.xmin,self.ymin),(self.xmax,self.ymax),(0,255,0))
+            cv2.rectangle(imagem,(self.xmin,self.ymin),(self.xmax,self.ymax),(0,0,255))
         else:
             cv2.rectangle(imagem,(self.xmin,self.ymin),(self.xmax,self.ymax),(255,0,0))  
 
