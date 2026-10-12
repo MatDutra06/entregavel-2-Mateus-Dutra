@@ -12,7 +12,6 @@ def ler_anotacoes(caminho):
             imagens = {}
 
             for linha in leitor1:
-                check = True
                 nome = linha["imagem"]
 
                 if nome not in imagens:
